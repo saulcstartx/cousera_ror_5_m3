@@ -130,7 +130,7 @@ function MenuSearchService($q, $http) {
     var found = [];
     for (var i = 0; i < items.length; i++)
     {
-      if (items[i].name.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) > -1) {
+      if (items[i].description.toLowerCase().indexOf(searchTerm.trim().toLowerCase()) > -1) {
         found.push(items[i]);
       }
     }
