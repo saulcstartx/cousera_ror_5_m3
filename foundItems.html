@@ -1,0 +1,21 @@
+<table ng-hide="fivm.nothingFound()" class="table table-bordered">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Short Name</th>
+      <th>Description</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="item in fivm.items">
+      <td>{{item.name}}</td>
+      <td>{{item.short_name}}</td>
+      <td>{{item.description}}</td>
+      <td><button ng-click="fivm.onRemove({index: $index});">Don't want this one!</button></td>
+    </tr>
+  </tbody>
+</table>
+<div class="col-xs-12 error" ng-show="fivm.nothingFound()">
+  {{fivm.nothingFoundMessage}}
+<div>
